@@ -11,10 +11,18 @@
  	if (typeof str !== 'string') {
  		return null
  	}
- 	var strToArray = str.split("");
- 	var reverseArray = strToArray.reverse();
- 	var arrayToString = reverseArray.join("");
- 	return arrayToString
+ 	// var strToArray = str.split("");
+ 	// var reverseArray = strToArray.reverse();
+ 	// var arrayToString = reverseArray.join("");
+ 	// return arrayToString
+
+ 	// var reverseStr = "";
+ 	for (var i = str.length - 1; i >=  0; i--) {
+ 		reverseStr += str[i];
+ 	}
+ 	return reverseStr
+
+ 	return str.split("").reverse().join("")
  }
 
  /** Function: alphaOrder
@@ -24,6 +32,14 @@
  * @return {string} in alphabetical order
  * ie: "cake" => "acek"
  */
+ function alphaOrder(str) {
+ 	if (typeof str === "string") {
+ 		var order = str.split("");
+	 	order = order.sort().join("");
+	 	return order
+ 	}
+ 	return null
+ }
 
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
@@ -68,7 +84,7 @@
 
 module.exports = {
     firstReverse: reverseString,
-    alphaOrder: null,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
