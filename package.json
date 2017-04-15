@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "blah": "",
   "author": "",
   "license": "MIT",
   "devDependencies": {
